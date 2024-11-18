@@ -51,6 +51,13 @@ static void readfn (Fn *fn) {
       
     }
 
+    if (blk->jmp.type == Jjnz) {
+      std::string name = x + fn->tmp[blk->jmp.arg.val].name;
+      if (name.size() > 1 && !has[name]) {
+        use[blocks_names[blk]].insert(name);
+      }
+    }
+
     if (blk->jmp.type == Jretw) {
       std::string name = x + fn->tmp[blk->jmp.arg.val].name;
       if (name.size() > 1 && !has[name]) {
