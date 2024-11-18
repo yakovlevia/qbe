@@ -6,6 +6,8 @@ tools/  Miscellaneous tools (testing).
 test/   Tests.
 amd64/
 arm64/  Architecture-specific code.
+tasks/  Problem solving
+qbe/    Launch sources
 
 The LICENSE file applies to all files distributed.
 
