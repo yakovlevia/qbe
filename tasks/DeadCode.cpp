@@ -221,15 +221,15 @@ void print_info(std::set<Ins*> marked_i, std::set<Phi*> marked_phi, std::set<Blk
 
     std::cout << "\n-----------blk--------------------\n";
 
-    // std::cout << "-----------rdom-------------------\n";
-    // for (auto [key, val] : rdom) {
-    //     std::cout << key->name << " : ";
-    //     for (auto q : val) {
-    //         std::cout << q->name << " ";
-    //     }
-    //     std::cout << "\n";
-    // }
-    // std::cout << "-----------rdom-------------------\n";
+    std::cout << "-----------rdom-------------------\n";
+    for (auto [key, val] : rdom) {
+        std::cout << key->name << " : ";
+        for (auto q : val) {
+            std::cout << q->name << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "-----------rdom-------------------\n";
 
     std::cout << "-----------ridom-------------------\n";
     for (auto [key, val] : ridom) {
